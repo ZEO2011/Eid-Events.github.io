@@ -1,0 +1,364 @@
+/* Global Rules */
+@font-face {
+	font-family: LamaSans-SemiBold;
+	src: url(../fonts/LamaSans-SemiBold.ttf);
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: LamaSans-SemiBold;
+}
+
+body {
+	font-family: LamaSans-SemiBold !important;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+
+.container {
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* Small */
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+}
+
+/* Medium */
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+
+/* Large */
+@media (min-width: 1200px) {
+	.container {
+		width: 1170px;
+	}
+}
+
+/* Header */
+
+header {
+	inset: 0;
+	z-index: 999;
+	height: 180px;
+}
+
+header .container {
+	gap: 50px;
+}
+
+header .logo img {
+	width: 130px;
+	height: 130px;
+}
+
+header .nav:not(header .nav li i) {
+	gap: 40px;
+}
+
+header .nav li:not(header .nav li i) {
+	white-space: nowrap;
+}
+
+header .nav li:not(.special-btn):hover {
+	transform: scale(1.2);
+}
+
+header .nav li.special-btn,
+header .nav li i .nav li.special-btn {
+	background-color: #ed3b79;
+	border-radius: 100px;
+	padding: 15px 50px;
+	white-space: nowrap;
+}
+
+header .nav li.special-btn:hover {
+	transform: scale(1.1);
+}
+
+@media (max-width: 1080px) {
+	header .nav li i .nav li {
+		display: none;
+	}
+}
+
+header .nav li i:hover .nav {
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	background-color: rgb(0 0 0 / 20%);
+	padding: 30px;
+	transform: translateX(-22%);
+	width: 330px;
+	left: 70%;
+	top: 150%;
+}
+
+header .nav li i:hover .nav-en {
+	transform: translateX(-87%) !important;
+	padding: 30px 20px !important;
+}
+
+header .nav li i:hover .nav-en li.special-btn {
+	width: fit-content;
+	padding: 15px 10px !important;
+	text-align: center !important;
+}
+
+header .nav li i:hover .nav li {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+header .nav li i:hover .nav li:hover {
+	transform: scale(1);
+}
+header .nav li i .special-btn {
+	padding: 15px 10px;
+	text-align: center;
+}
+/* Landing */
+
+section.landing {
+	min-height: 100vh;
+	background-image: url(../imgs/landing.png);
+	background-size: cover;
+}
+
+section.landing .content {
+	inset: 0;
+	right: 20%;
+}
+
+@media (max-width: 767px) {
+	section.landing .content {
+		width: 100%;
+		inset: 0;
+		text-align: center;
+	}
+}
+
+section.landing .content .text p {
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+
+section.landing .content .text a {
+	background-color: #7862aa;
+	padding: 10px 20px;
+	border-radius: 50px;
+}
+
+section.landing .content .bullets {
+	align-self: flex-end;
+	gap: 5px;
+	right: -15%;
+}
+
+@media (max-width: 767px) {
+	section.landing .content .bullets {
+		width: 100%;
+		inset: 0;
+		align-items: flex-end;
+		justify-content: center;
+	}
+}
+
+/* Grid */
+
+section.grid {
+	min-height: 100vh;
+	background: #f68b1f url(https://eid.gea.gov.sa/images/EidIdentityBG.png)
+		no-repeat bottom;
+	background-size: cover;
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+	width: 100%;
+	height: 100vh !important;
+}
+
+section.grid .boxes {
+	gap: 50px;
+	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	align-content: center;
+	justify-items: center;
+}
+
+@media (max-width: 692px) {
+	section.grid .boxes {
+		grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+		margin-top: 200px;
+	}
+}
+
+section.grid .boxes .box {
+	width: 180px !important;
+}
+@media (max-width: 992px) {
+	section.grid .boxes .box {
+		width: 150px !important;
+	}
+}
+
+section.grid .boxes .box .img-container {
+	background-color: #fbb315;
+	padding: 50px 25px;
+	border-radius: 30px;
+}
+
+section.grid .boxes .box img {
+	max-width: 100%;
+	max-height: 140px;
+}
+
+section.grid .boxes .box .mini-box {
+	padding: 15px;
+	background-color: #ed3a78;
+	border-radius: 30px;
+	text-align: center;
+	white-space: nowrap;
+	width: fit-content;
+}
+
+section.grid .boxes .box:nth-child(2) .mini-box {
+	background-color: transparent;
+}
+
+section.grid .boxes .box:nth-child(3) .mini-box {
+	background-color: #00cfb1;
+}
+
+section.grid .boxes .box:nth-child(4) .mini-box {
+	background-color: #f26c3a;
+}
+
+section.grid .boxes .box:nth-child(5) .mini-box {
+	background-color: #00bbe8;
+}
+
+section.grid .boxes .box:nth-child(1) .mini-box:hover,
+section.grid .boxes .box:nth-child(2) .mini-box:hover,
+section.grid .boxes .box:nth-child(4) .mini-box:hover,
+section.grid .boxes .box:nth-child(5) .mini-box:hover {
+	background-color: #fbb315;
+	transform: scale(1.08);
+}
+
+/* Eid Identity */
+
+section.eid-identity {
+	min-height: 100vh;
+	background: #7862aa url(https://eid.gea.gov.sa/images/EidGreetingsBG.png)
+		no-repeat;
+	padding-top: 6rem;
+	padding-bottom: 6rem;
+	width: 100%;
+	height: 100vh !important;
+}
+@media (max-width: 767px) {
+	section.eid-identity .container {
+		margin-top: 100px;
+	}
+}
+
+section.eid-identity .boxes {
+	align-items: center;
+	justify-content: center;
+}
+
+section.eid-identity .boxes .box {
+	width: 50%;
+}
+
+@media (max-width: 767px) {
+	section.eid-identity .boxes .box {
+		height: fit-content;
+		width: fit-content;
+	}
+}
+
+section.eid-identity .boxes:last-child {
+	height: 30%;
+}
+
+section.eid-identity .boxes:first-child img {
+	max-width: 100%;
+	height: auto;
+	width: 350px;
+}
+
+section.eid-identity .boxes:last-child {
+	align-self: start;
+}
+
+@media (max-width: 767px) {
+	section.eid-identity .boxes:last-child {
+		margin-top: 50px;
+	}
+}
+
+section.eid-identity .boxes:last-child p {
+	font-size: 20px;
+}
+
+section.eid-identity .boxes:last-child img {
+	max-width: 100%;
+	height: auto;
+}
+
+section.eid-identity .boxes:last-child a {
+	color: #7862aa;
+	padding: 10px 20px;
+	background-color: #fbb315;
+	border-radius: 30px;
+}
+
+section.eid-identity .boxes:last-child a:hover {
+	font-size: 19px;
+}
+
+/* Footer */
+
+footer {
+	background-color: #7862aa;
+}
+
+footer .container {
+	padding-top: 200px;
+}
+
+footer img {
+	width: 130px;
+	height: 130px;
+}
+
+footer img {
+	width: 50%;
+}
+
+footer img.border {
+	border-right: 1px solid white;
+}
